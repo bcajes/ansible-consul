@@ -22,8 +22,8 @@
   "advertise_addr": "{{ consul_advertise_address }}",
 {% endif %}
   "datacenter": "{{ consul_datacenter }}",
-{% if consul_is_server and consul_bootstrap is defined %}
-  "bootstrap": {{ "true" if consul_bootstrap else "false" }},
+{% if consul_is_server and ec2_tag_consul_bootstrap is defined %}
+  "bootstrap": {{ "true" if ec2_tag_consul_bootstrap else "false" }},
 {% endif %}
 {% if consul_is_server and consul_bootstrap_expect is defined %}
   "bootstrap_expect": {{ consul_bootstrap_expect }},
