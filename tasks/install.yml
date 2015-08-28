@@ -55,6 +55,7 @@
   user: >
     name={{consul_user}}
     group={{consul_group}}
+    system=yes
 
 - name: set ownership
   file: >
